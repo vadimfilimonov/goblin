@@ -7,6 +7,6 @@ import (
 )
 
 func TestMultiply(t *testing.T) {
-	assert.Equal(t, Multiply(6, 4), 24)
-	assert.Equal(t, Multiply(42, 0), 0)
+	assert.Equal(t, Multiply(float64(6), float64(4)), float64(24))
+	assert.Equal(t, Multiply(float64(42), float64(0)), float64(0))
 }
