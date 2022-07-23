@@ -4,8 +4,14 @@ build:
 verify:
 	go mod verify
 
-vet:
+lint:
 	go vet ./...
+
+format:
+	gofmt -w .
 
 test:
 	go test ./...
+
+docs:
+	godoc .
