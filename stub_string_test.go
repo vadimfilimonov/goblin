@@ -7,6 +7,5 @@ import (
 )
 
 func TestStubString(t *testing.T) {
-	act := StubString()
-	assert.Equal(t, act, "")
+	assert.Equal(t, "", StubString())
 }

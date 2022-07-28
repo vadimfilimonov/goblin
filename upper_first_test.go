@@ -7,7 +7,7 @@ import (
 )
 
 func TestUpperFirst(t *testing.T) {
-	assert.Equal(t, UpperFirst("fred"), "Fred")
-	assert.Equal(t, UpperFirst("FRED"), "FRED")
-	assert.Equal(t, UpperFirst(""), "")
+	assert.Equal(t, "Fred", UpperFirst("fred"))
+	assert.Equal(t, "FRED", UpperFirst("FRED"))
+	assert.Equal(t, "", UpperFirst(""))
 }

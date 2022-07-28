@@ -7,7 +7,7 @@ import (
 )
 
 func TestLt(t *testing.T) {
-	assert.Equal(t, Lt(float64(1), float64(3)), true)
-	assert.Equal(t, Lt(float64(3), float64(3)), false)
-	assert.Equal(t, Lt(float64(3), float64(1)), false)
+	assert.Equal(t, true, Lt(1, 3))
+	assert.Equal(t, false, Lt(3, 3))
+	assert.Equal(t, false, Lt(3, 1))
 }

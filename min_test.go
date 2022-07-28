@@ -8,10 +8,10 @@ import (
 
 func TestMin(t *testing.T) {
 	act, err := Min([]float64{4, 2, 8, 6})
-	assert.Equal(t, act, float64(2))
+	assert.Equal(t, 2.0, act)
 	assert.NoError(t, err)
 
 	act, err = Min([]float64{})
-	assert.Equal(t, act, float64(0))
+	assert.Equal(t, 0.0, act)
 	assert.Error(t, err)
 }

@@ -7,6 +7,5 @@ import (
 )
 
 func TestStubTrue(t *testing.T) {
-	act := StubTrue()
-	assert.Equal(t, act, true)
+	assert.Equal(t, true, StubTrue())
 }

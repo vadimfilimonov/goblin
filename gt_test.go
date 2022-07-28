@@ -7,7 +7,7 @@ import (
 )
 
 func TestGt(t *testing.T) {
-	assert.Equal(t, Gt(float64(3), float64(1)), true)
-	assert.Equal(t, Gt(float64(3), float64(3)), false)
-	assert.Equal(t, Gt(float64(1), float64(3)), false)
+	assert.Equal(t, true, Gt(3, 1))
+	assert.Equal(t, false, Gt(3, 3))
+	assert.Equal(t, false, Gt(1, 3))
 }
