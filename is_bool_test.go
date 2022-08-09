@@ -15,4 +15,6 @@ func TestIsBool(t *testing.T) {
 	assert.Equal(t, false, IsBool([]string{"1", "2", "3"}))
 	assert.Equal(t, false, IsBool(map[string]bool{"foo": true}))
 	assert.Equal(t, false, IsBool(42))
+
+	assert.Equal(t, IsBoolean(true), IsBool(true))
 }

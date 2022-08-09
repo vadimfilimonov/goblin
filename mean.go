@@ -2,7 +2,7 @@ package goblin
 
 import "fmt"
 
-// Computes the mean of the values in slice. If slice is empty, error is returned.
+// Mean computes the mean of the values in slice. If slice is empty, error is returned.
 func Mean(numbers []float64) (float64, error) {
 	size := float64(len(numbers))
 

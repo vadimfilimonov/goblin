@@ -1,10 +1,11 @@
 package goblin
 
 import (
-	"strings"
+	"golang.org/x/text/cases"
+	"golang.org/x/text/language"
 )
 
-// Converts the first character of `string` to upper case.
+// UpperFirst converts the first character of `string` to upper case.
 func UpperFirst(text string) string {
-	return strings.Title(text)
+	return cases.Title(language.Und, cases.NoLower).String(text)
 }

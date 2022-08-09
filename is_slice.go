@@ -4,7 +4,7 @@ import (
 	"reflect"
 )
 
-// Checks if 'arg' is classified as a 'Slice'
+// IsSlice checks if 'arg' is classified as a 'Slice'
 func IsSlice(arg interface{}) bool {
 	val := reflect.ValueOf(arg)
 

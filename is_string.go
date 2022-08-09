@@ -4,7 +4,7 @@ import (
 	"reflect"
 )
 
-// Checks if 'arg' is classified as a `String`.
+// IsString checks if 'arg' is classified as a `String`.
 func IsString(arg interface{}) bool {
 	val := reflect.ValueOf(arg)
 

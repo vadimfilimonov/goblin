@@ -6,6 +6,7 @@ verify:
 
 lint:
 	go vet ./...
+	golangci-lint run
 
 format:
 	gofmt -w .
