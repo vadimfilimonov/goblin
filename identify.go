@@ -1,6 +1,6 @@
 package goblin
 
 // Identity returns the first argument it receives.
-func Identity(arg interface{}) interface{} {
+func Identity[T any](arg T) T {
 	return arg
 }
