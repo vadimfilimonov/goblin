@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestFilter(t *testing.T) {
+func TestMap(t *testing.T) {
 	type User struct {
 		user   string
 		age    int
@@ -14,10 +14,10 @@ func TestFilter(t *testing.T) {
 	}
 
 	input := []User{{user: "barney", age: 36, active: true}, {user: "fred", age: 40, active: false}}
-	actual := Filter(input, func(item User, index int, slice []User) bool {
-		return !item.active
+	actual := Map(input, func(item User, index int, slice []User) string {
+		return item.user
 	})
-	expected := []User{{user: "fred", age: 40, active: false}}
+	expected := []string{"barney", "fred"}
 
 	assert.Equal(t, expected, actual)
 }
