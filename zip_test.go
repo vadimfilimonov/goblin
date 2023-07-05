@@ -47,6 +47,6 @@ func TestZip(t *testing.T) {
 	}
 
 	for _, tc := range testCases {
-		assert.Equal(t, tc.want, Zip(tc.input))
+		assert.Equal(t, tc.want, Zip(tc.input...))
 	}
 }

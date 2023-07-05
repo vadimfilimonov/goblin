@@ -1,7 +1,7 @@
 package goblin
 
 // Zip creates a slice of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on.
-func Zip[T any](slice [][]T) [][]T {
+func Zip[T any](slice ...[]T) [][]T {
 	if len(slice) == 0 {
 		return [][]T{}
 	}
