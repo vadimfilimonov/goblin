@@ -45,7 +45,7 @@ func Compact[T comparable](slice []T) ([]T, error) {
 			}
 		case bool:
 			{
-				isFalsey := reflect.ValueOf(item).Bool() == false
+				isFalsey := !reflect.ValueOf(item).Bool()
 				if !isFalsey {
 					compactedSlice = append(compactedSlice, item)
 				}
