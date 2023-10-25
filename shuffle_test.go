@@ -8,7 +8,8 @@ import (
 
 func TestShuffle(t *testing.T) {
 	input := []int{1, 2, 3, 4}
-	actual := Shuffle(input)
+	actual, err := Shuffle(input)
 
+	assert.NoError(t, err)
 	assert.ElementsMatch(t, actual, input)
 }
