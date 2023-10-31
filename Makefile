@@ -1,6 +1,9 @@
 build:
 	go build -v ./...
 
+install:
+	go mod tidy
+
 verify:
 	go mod verify
 
@@ -20,5 +23,8 @@ test-coverage:
 build-test-coverage-report:
 	go test . -coverprofile=coverage.out
 	go tool cover -html=coverage.out
+
 docs:
 	godoc .
+
+.PHONY: build install verify lint format test test-coverage build-test-coverage-report docs
