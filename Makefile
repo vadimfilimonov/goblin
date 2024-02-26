@@ -1,7 +1,15 @@
+# make ./bin part of PATH for this Makefile
+PWD   := $(PWD)
+PATH  := $(PWD)/bin:$(PATH)
+SHELL := env PATH=$(PATH) /bin/bash
+
 build:
 	go build -v ./...
 
-install:
+tools:
+	cd tools && go mod tidy && go generate -tags tools
+
+install: tools
 	go mod tidy
 
 verify:
@@ -9,7 +17,7 @@ verify:
 
 lint:
 	go vet ./...
-	golangci-lint run
+	golangci-lint run ./...
 
 format:
 	gofmt -w .
@@ -27,4 +35,4 @@ build-test-coverage-report:
 docs:
 	godoc .
 
-.PHONY: build install verify lint format test test-coverage build-test-coverage-report docs
+.PHONY: build tools install verify lint format test test-coverage build-test-coverage-report docs
