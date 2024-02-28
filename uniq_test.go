@@ -1,12 +1,32 @@
 package goblin
 
 import (
+	"reflect"
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
 func TestUniq(t *testing.T) {
-	assert.Equal(t, []int{}, Uniq([]int{}))
-	assert.Equal(t, []int{2, 1}, Uniq([]int{2, 1, 2}))
+	tests := []struct {
+		name  string
+		slice []int
+		want  []int
+	}{
+		{
+			name:  "success",
+			slice: []int{2, 1, 2},
+			want:  []int{2, 1},
+		},
+		{
+			name:  "empty",
+			slice: []int{2, 1, 2},
+			want:  []int{2, 1},
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := Uniq(tt.slice); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("Uniq() = %v, want %v", got, tt.want)
+			}
+		})
+	}
 }
