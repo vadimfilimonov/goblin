@@ -3,6 +3,7 @@ module tools
 go 1.21.3
 
 require (
+	github.com/fzipp/gocyclo v0.6.0
 	github.com/golangci/golangci-lint v1.56.2
 	github.com/jgautheron/goconst v1.7.0
 )
@@ -49,7 +50,6 @@ require (
 	github.com/fatih/structtag v1.2.0 // indirect
 	github.com/firefart/nonamedreturns v1.0.4 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
-	github.com/fzipp/gocyclo v0.6.0 // indirect
 	github.com/ghostiam/protogetter v0.3.4 // indirect
 	github.com/go-critic/go-critic v0.11.1 // indirect
 	github.com/go-toolsmith/astcast v1.1.0 // indirect

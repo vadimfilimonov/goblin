@@ -23,6 +23,9 @@ lint:
 format:
 	gofmt -w .
 
+analyse:
+	gocyclo .
+
 test:
 	go test ./...
 
@@ -36,4 +39,4 @@ build-test-coverage-report:
 docs:
 	godoc .
 
-.PHONY: build tools install verify lint format test test-coverage build-test-coverage-report docs
+.PHONY: analyse build tools install verify lint format test test-coverage build-test-coverage-report docs
