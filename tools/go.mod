@@ -6,6 +6,7 @@ require (
 	github.com/fzipp/gocyclo v0.6.0
 	github.com/golangci/golangci-lint v1.56.2
 	github.com/jgautheron/goconst v1.7.0
+	github.com/kisielk/errcheck v1.7.0
 )
 
 require (
@@ -87,7 +88,6 @@ require (
 	github.com/jirfag/go-printf-func-name v0.0.0-20200119135958-7558a9eaa5af // indirect
 	github.com/jjti/go-spancheck v0.5.2 // indirect
 	github.com/julz/importas v0.1.0 // indirect
-	github.com/kisielk/errcheck v1.7.0 // indirect
 	github.com/kisielk/gotool v1.0.0 // indirect
 	github.com/kkHAIKE/contextcheck v1.1.4 // indirect
 	github.com/kulti/thelper v0.6.3 // indirect
